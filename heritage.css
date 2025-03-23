@@ -1,0 +1,361 @@
+body {
+    background-color: #f7fdffd7;
+    margin: 0px;
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Navigation */
+.herosection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+    margin: 0%;
+    background-image: url("/api/placeholder/1200/600");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.navbar {
+    background-color: #0080B3;
+    border-radius: 10px;
+    height: 60px;
+    width: 80%;
+    color: whitesmoke;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0px 0px 0px;
+    padding: 0 30px;
+}
+
+#Emblem img {
+    width: 100px;
+}
+
+.nav-items {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-items li {
+    border-bottom: 3px solid transparent;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+.nav-items li:hover {
+    border-bottom: 3px solid rgb(228, 220, 220);
+}
+
+.CTA {
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.CTA:hover {
+    background-color: whitesmoke;
+    color: #0080B3;
+    transition: 250ms;
+}
+
+.page-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+/* Heritage Overview Section */
+.heritage-overview {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.heritage-overview h2 {
+    color: #0080B3;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.heritage-overview p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Monument Showcase */
+.monument-showcase {
+    padding: 30px 10%;
+    background-color: #f0f8ff;
+}
+
+.monument-showcase h2 {
+    color: #0080B3;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.monument-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.monument-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.monument-card:hover {
+    transform: translateY(-10px);
+}
+
+.monument-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.monument-info {
+    padding: 20px;
+}
+
+.monument-info h3 {
+    color: #0080B3;
+    margin-top: 0;
+}
+
+.monument-info p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.monument-info .read-more {
+    display: inline-block;
+    color: white;
+    background-color: #0080B3;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.monument-info .read-more:hover {
+    background-color: #006a94;
+}
+
+/* Timeline Section */
+.heritage-timeline {
+    padding: 50px 10%;
+}
+
+.heritage-timeline h2 {
+    color: #0080B3;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #0080B3;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: white;
+    border: 4px solid #0080B3;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #f0f8ff;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #f0f8ff;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #f0f8ff;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #f0f8ff transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: #f0f8ff;
+    position: relative;
+    border-radius: 6px;
+}
+
+.timeline-content h3 {
+    color: #0080B3;
+}
+
+/* UNESCO Section */
+.unesco-section {
+    padding: 50px 10%;
+    background-color: #e6f7ff;
+    text-align: center;
+}
+
+.unesco-section h2 {
+    color: #0080B3;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.unesco-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.unesco-site {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.unesco-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.unesco-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.unesco-info h3 {
+    color: #0080B3;
+    margin-top: 0;
+}
+
+.unesco-info .unesco-badge {
+    display: inline-block;
+    background-color: #009688;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #0080B3;
+    color: white;
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
