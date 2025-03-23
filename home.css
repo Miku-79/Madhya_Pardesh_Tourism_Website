@@ -10,11 +10,11 @@ body{
     height: 100vh;
     margin: 0%;
 
-    background-image: url(./1572436388_madhya_pradesh_web\(1\).jpg);
+    background-image: url(./assets/image/1572436388_madhya_pradesh_web\(1\).jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
     position: relative;
 }
 .navbar {
@@ -25,7 +25,6 @@ body{
     width: 80%;
     color: whitesmoke;
     font-size: 20px;
-    margin: auto;
 
     display: flex;
     align-items: center; 
@@ -79,6 +78,46 @@ body{
     width: 45%;
     height: 30%;
 }
+.Reason_section{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    margin-top: 50px;
+    height: 100vh;
+    width: 100%;
+/* 
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory; */
+
+    border: 2px solid red;
+}
+
+#reason_heading{
+    font-size: 40px;
+    color: #0080B3;
+}
+
+.Reason_folder{
+    height: 100vh;
+    width: 100vw;
+/* 
+    scroll-snap-align: start; */
+}
+
+#reason1{
+    background-color: red;
+    width: 1500px;
+}
+#reason2{
+    background-color: blue;
+}
+#reason3{
+    background-color: green;
+}
+#reason4{
+    background-color: yellow;
+}
 
 
 .Destinations{
@@ -107,26 +146,26 @@ body{
 }
 
 #bhopal{
-    background-image: url(./profile_banner.webp);
+    background-image: url(./assets/image/profile_banner.webp);
     background-size: cover;
 }
 #jabalpur{
-    background-image: url(./jabal.webp);
+    background-image: url(./assets/image/jabal.webp);
     background-size: cover;
 }
 #rewa{
-    background-image: url(./rewa.png);
+    background-image: url(./assets/image/rewa.png);
     background-size: cover;
 }
 #bhedghat{
-    background-image: url(./bhedghat.webp);
+    background-image: url(./assets/image/bhedghat.webp);
     background-size: cover;
     background-position: center;
 }
 #island{
-    background-image: url(./island.png);
+    background-image: url(./assets/image/island.png);
     background-size: cover;
 }#shivpuri{
-    background-image: url(./shiv.webp);
+    background-image: url(./assets/image/shiv.webp);
     background-size: cover;
 }
