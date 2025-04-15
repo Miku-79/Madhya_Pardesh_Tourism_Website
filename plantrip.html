@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Your Trip to Madhya Pradesh</title>
+<link rel="stylesheet" href="./plantrip.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+ <div class="nav-container">
+    <nav class="navbar">
+        <div id="Emblem">
+            <img src="./assets/image/MPTDC_logo.png" alt="MP Emblem">
+        </div>
+        <ul class="nav-items">
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./nature.html">Nature</a></li>
+            <li><a href="./wildlife.html">Wildlife</a></li>
+            <li><a href="./heritage.html">Heritage</a></li>
+            <li><a href="./about.html">About us</a></li>
+        </ul>
+        <p class="CTA"> <a href="./plantrip.html">Plan A Trip</a></p>
+    </nav>
+</div>
+
+  <div class="container">
+    <form action="thank-you.html" method="get">
+      <!-- Journey Selection Section -->
+      <h2>1. Select Your Journey</h2>
+      <div class="journey-options">
+        <div class="journey-option">
+          <input type="radio" id="heritage" name="journeyType" value="heritage" required>
+          <label for="heritage" class="journey-title">Heritage & History Tour</label>
+          <p class="journey-description">Explore ancient forts, palaces, and UNESCO sites including Khajuraho temples and Gwalior Fort.</p>
+          <p class="journey-details">Duration: 7 days | Starting from ₹45,000 per person</p>
+        </div>
+        
+        <div class="journey-option">
+          <input type="radio" id="wildlife" name="journeyType" value="wildlife">
+          <label for="wildlife" class="journey-title">Wildlife Safari Adventure</label>
+          <p class="journey-description">Experience the thrill of tiger spotting in Bandhavgarh, Kanha, and Pench national parks.</p>
+          <p class="journey-details">Duration: 8 days | Starting from ₹55,000 per person</p>
+        </div>
+        
+        <div class="journey-option">
+          <input type="radio" id="spiritual" name="journeyType" value="spiritual">
+          <label for="spiritual" class="journey-title">Spiritual & Religious Tour</label>
+          <p class="journey-description">Visit sacred sites including Ujjain, Omkareshwar, Maheshwar, and other spiritual destinations.</p>
+          <p class="journey-details">Duration: 6 days | Starting from ₹35,000 per person</p>
+        </div>
+        
+        <div class="journey-option">
+          <input type="radio" id="adventure" name="journeyType" value="adventure">
+          <label for="adventure" class="journey-title">Adventure & Outdoor Experience</label>
+          <p class="journey-description">Trek through Pachmarhi, water sports at Tawa Reservoir, and rock climbing in Chanderi.</p>
+          <p class="journey-details">Duration: 5 days | Starting from ₹40,000 per person</p>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <!-- Personal Information Section -->
+      <h2>2. Personal Information</h2>
+      
+      <div class="form-group">
+        <label for="firstName">First Name *</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="lastName">Last Name *</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="nationality">Nationality</label>
+        <input type="text" id="nationality" name="nationality">
+      </div>
+      
+      <hr>
+      
+      <!-- Travel Details Section -->
+      <h2>3. Travel Details</h2>
+      
+      <div class="form-group">
+        <label for="travelDate">Preferred Travel Date *</label>
+        <input type="date" id="travelDate" name="travelDate" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="duration">Duration Flexibility</label>
+        <select id="duration" name="duration">
+          <option value="exact">Exact dates only</option>
+          <option value="flexible-3">±3 days flexible</option>
+          <option value="flexible-7">±7 days flexible</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="adults">Number of Adults *</label>
+        <input type="number" id="adults" name="adults" min="1" value="1" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="children">Number of Children (under 12)</label>
+        <input type="number" id="children" name="children" min="0" value="0">
+      </div>
+      
+      <div class="form-group">
+        <label for="accommodation">Preferred Accommodation</label>
+        <select id="accommodation" name="accommodation">
+          <option value="budget">Budget-friendly</option>
+          <option value="comfort">Comfort</option>
+          <option value="luxury">Luxury</option>
+          <option value="heritage">Heritage Properties</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="specialRequests">Special Requests or Requirements</label>
+        <textarea id="specialRequests" name="specialRequests" rows="4"></textarea>
+      </div>
+      
+      <button type="submit" class="submit-button">Submit Trip Request</button>
+    </form>
+  </div>
+</body>
+</html>
