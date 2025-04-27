@@ -78,7 +78,11 @@ a{
     color: #0080B3;
     transition: 250ms;
 }
+#cta:hover{
+    color: #0080B3;
+    }
 
+    
 #tagline {
     position: absolute;
     top: 25%;
