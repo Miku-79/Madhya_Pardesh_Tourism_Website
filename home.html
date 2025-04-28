@@ -54,7 +54,7 @@
             </div>
         </div>
         <div class="Reason_folder" id="reason4">
-            <img class="reason_img" src="./assets/image/reason_4.webp" alt="Culture">
+            <a href="./heritage.html"><img class="reason_img" src="./assets/image/reason_4.webp" alt="Culture"></a>
             <div class="reason_content">
                 <h3>Vibrant Culture & Traditions</h3>
                 <p>Immerse yourself in the colorful tribal cultures, traditional arts and crafts, and the warm hospitality that defines the heart of Incredible India.</p>
@@ -67,22 +67,17 @@
     <h1 class="destinations_heading">Top Destinations</h1>
     <div class="destination_grid">
         <div class="destination_child" id="bhopal">
-            <div class="destination_name">Bhopal - City of Lakes</div>
+            <a href="./bhopal.html"><div class="destination_name">Bhopal - City of Lakes</div></a>
+            
         </div>
         <div class="destination_child" id="jabalpur">
             <div class="destination_name">Jabalpur</div>
         </div>
         <div class="destination_child" id="rewa">
-            <div class="destination_name">Rewa</div>
+            <a href="./rewa.html"><div class="destination_name">Rewa</div></a>
         </div>
         <div class="destination_child" id="bhedghat">
-            <div class="destination_name">Bhedaghat</div>
-        </div>
-        <div class="destination_child" id="island">
-            <div class="destination_name">Hanumantiya Island</div>
-        </div>
-        <div class="destination_child" id="shivpuri">
-            <div class="destination_name">Shivpuri</div>
+          <a href="./bedhghat.html"> <div class="destination_name">Bhedaghat</div></a>
         </div>
     </div>
 </section>
@@ -95,7 +90,7 @@
             <div class="wildlife_content">
                 <h3>Kanha National Park</h3>
                 <p>Kanha Tiger Reserve, also known as Kanha National Park, is one of the finest wildlife areas in the world. It is the inspiration behind Rudyard Kipling's "The Jungle Book".</p>
-                <a href="#" class="learn_more">Learn More →</a>
+                <a href="./khana.html" class="learn_more">Learn More →</a>
             </div>
         </div>
         <div class="wildlife_card">
@@ -103,7 +98,7 @@
             <div class="wildlife_content">
                 <h3>Bandhavgarh National Park</h3>
                 <p>Known for the highest density of tigers in India, Bandhavgarh offers excellent opportunities for wildlife enthusiasts to spot the majestic Royal Bengal Tigers.</p>
-                <a href="#" class="learn_more">Learn More →</a>
+                <a href="./bandhavgarh.html" class="learn_more">Learn More →</a>
             </div>
         </div>
         <div class="wildlife_card">
@@ -111,7 +106,7 @@
             <div class="wildlife_content">
                 <h3>Pench Tiger Reserve</h3>
                 <p>Nestled in the lower southern reaches of the Satpura hills, Pench National Park is named after the river Pench which flows through the park.</p>
-                <a href="#" class="learn_more">Learn More →</a>
+                <a href="./pench.html" class="learn_more">Learn More →</a>
             </div>
         </div>
     </div>
@@ -126,6 +121,7 @@
                 <p class="event_date">February 20-26, 2026</p>
                 <h3>Khajuraho Dance Festival</h3>
                 <p>A week-long classical dance festival showcasing various Indian dance forms against the backdrop of the magnificent Khajuraho temples.</p>
+                <a href="./kahjuraofest.html" class="learn_more">Learn More →</a>
             </div>
         </div>
         <div class="event_card">
@@ -134,6 +130,7 @@
                 <p class="event_date">December 14-20, 2025</p>
                 <h3>Tansen Music Festival</h3>
                 <p>An annual musical extravaganza in Gwalior, paying tribute to the legendary musician Tansen, one of the 'Nine Jewels' of Emperor Akbar's court.</p>
+                <a href="./tansen.html" class="learn_more">Learn More →</a>
             </div>
         </div>
         <div class="event_card">
@@ -142,19 +139,44 @@
                 <p class="event_date">March 11, 2026</p>
                 <h3>Mahashivratri Fair, Pachmarhi</h3>
                 <p>A vibrant religious fair commemorating Lord Shiva with traditional rituals, music, dance, and handicraft exhibitions.</p>
+                <a href="./mahashiv.html" class="learn_more">Learn More →</a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="subscribe_section">
+<div class="subscribe_section">
     <h2 class="subscribe_heading">Subscribe for Travel Updates</h2>
     <p>Get the latest offers, travel tips and destination updates directly in your inbox</p>
-    <div class="subscribe_form">
-        <input type="email" placeholder="Enter your email address" class="subscribe_input">
-        <button class="subscribe_btn">Subscribe</button>
+    
+    <div id="subscribeFormContainer">
+      <div class="subscribe_form">
+        <input type="email" class="subscribe_input" placeholder="Enter your email" id="emailInput">
+        <button class="subscribe_btn" id="subscribeBtn">Subscribe</button>
+      </div>
     </div>
-</section>
+    
+    <div id="thankYouMessage" style="display: none;">
+      <h3>Thank you for subscribing!</h3>
+      <p>You'll start receiving our travel updates shortly.</p>
+    </div>
+  </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const subscribeBtn = document.getElementById('subscribeBtn');
+      const subscribeFormContainer = document.getElementById('subscribeFormContainer');
+      const thankYouMessage = document.getElementById('thankYouMessage');
+      
+      subscribeBtn.addEventListener('click', function() {
+        // Hide the form
+        subscribeFormContainer.style.display = 'none';
+        
+        // Show the thank you message
+        thankYouMessage.style.display = 'block';
+      });
+    });
+    </script>
 
 <footer>
     <div class="footer_container">

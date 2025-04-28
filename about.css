@@ -11,27 +11,35 @@ body {
     color: #333;
 }
 .nav-container{
-  display: flex;
-    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Stack navbar and banner vertically */
+    align-items: center;
+    justify-content: start;
     width: 100%;
-    margin-bottom: 50px;
+    height: 80vh;
+    background-image: url(./assets/image/Gwalior_Fort_front.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Navigation */
 .navbar {
-  background-color: #0080B3;
-  border-radius: 10px;
-
-  height: 60px;
-  width: 80%;
-  color: whitesmoke;
-  font-size: 20px;
-  
-  display: flex;
-  align-items: center; 
-  justify-content: space-between; 
-  margin: 25px 0px 0px 0px; 
-  padding: 0 30px;
+    background-color: #0080B3;
+    border-radius: 10px;
+    height: 60px;
+    width: 80%;
+    color: whitesmoke;
+    font-size: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    margin-top: 25px; 
+    padding: 0 30px;
+    z-index: 2;
+    position: relative;
 }
 
 #Emblem img {
@@ -75,17 +83,18 @@ color: #0080B3;
 }
 
 .header-banner {
-    height: 400px;
-    background-image: url('/api/placeholder/1200/400');
-    background-size: cover;
-    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
-    margin-top: 100px;
-    position: relative;
+    z-index: 1;
+    padding-top: 80px; /* To offset the navbar height */
 }
 
 .header-banner::before {

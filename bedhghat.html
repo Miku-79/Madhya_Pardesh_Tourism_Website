@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhedaghat Marble Rocks - Madhya Pradesh Tourism</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #e6f2ff, #f5f9ff);
+            color: #333;
+        }
+
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            width: 100%;
+            height: 80vh;
+            background-image: url("https://images.unsplash.com/photo-1597074866923-dc0589150358?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: #0080B3;
+            border-radius: 10px;
+            height: 60px;
+            width: 80%;
+            color: whitesmoke;
+            font-size: 20px;
+            display: flex;
+            align-items: center; 
+            justify-content: space-between; 
+            margin-top: 25px; 
+            padding: 0 30px;
+            z-index: 2;
+            position: relative;
+        }
+
+        #Emblem img {
+            width: 100px;
+        }
+
+        .nav-items {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            flex-grow: 1;
+            justify-content: center; 
+        }
+
+        .nav-items li {
+            border-bottom: 3px solid transparent;
+            transition: 250ms;
+            cursor: pointer;
+        }
+
+        .nav-items li:hover {
+            border-bottom: 3px solid rgb(228, 220, 220);
+        }
+
+        .CTA {
+            border: 2px solid whitesmoke;
+            border-radius: 10px;
+            padding: 5px;
+            cursor: pointer;
+            margin: 0;
+        }
+
+        .CTA:hover {
+            background-color: whitesmoke;
+            color: #0080B3;
+            transition: 250ms;
+        }
+
+        #cta:hover {
+            color: #0080B3;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .header-banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            z-index: 1;
+            padding-top: 80px;
+        }
+
+        .header-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .banner-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .banner-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .main-content {
+            padding: 60px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #0080B3;
+        }
+
+        .bhedaghat-intro {
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 50px;
+            color: #555;
+        }
+
+        .highlight-section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .highlight-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #0080B3;
+        }
+
+        .highlights-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .highlight-box {
+            background-color: #f5f9ff;
+            padding: 25px;
+            border-radius: 8px;
+            min-width: 250px;
+            flex: 1;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .highlight-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .highlight-icon {
+            font-size: 2.5rem;
+            color: #0080B3;
+            margin-bottom: 15px;
+        }
+
+        .highlight-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .highlight-description {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .book-button {
+            background-color: #0080B3;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 30px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .book-button:hover {
+            background-color: #006699;
+        }
+
+        .attractions-section {
+            margin: 80px 0;
+            background-color: #f5f5f5;
+            padding: 50px 30px;
+            border-radius: 10px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .attraction-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .attraction-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .attraction-content {
+            padding: 20px;
+        }
+
+        .attraction-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0080B3;
+            margin-bottom: 10px;
+        }
+
+        .attraction-description {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .attraction-timing {
+            font-size: 0.9rem;
+            color: #777;
+            font-style: italic;
+        }
+
+        .gallery-section {
+            margin: 80px 0;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+
+        .location-section {
+            margin: 80px 0;
+            text-align: center;
+        }
+
+        .location-text {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .map-container {
+            height: 400px;
+            background-color: #ddd;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 5% 20px;
+            margin-top: 80px;
+        }
+
+        .footer_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer_column {
+            flex-basis: 22%;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+
+        .footer_column h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer_column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #0080B3;
+        }
+
+        .footer_links {
+            list-style: none;
+        }
+
+        .footer_links li {
+            margin-bottom: 10px;
+        }
+
+        .footer_links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer_links a:hover {
+            color: #0080B3;
+        }
+
+        .social_icons {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .social_icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #444;
+            border-radius: 50%;
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social_icon:hover {
+            background-color: #0080B3;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-items {
+                display: none;
+            }
+
+            .navbar {
+                justify-content: space-between;
+            }
+
+            .banner-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .highlights-container {
+                flex-direction: column;
+            }
+
+            .footer_column {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <div id="Emblem">
+                <img src="/api/placeholder/100/50" alt="MP Emblem">
+            </div>
+            <ul class="nav-items">
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./nature.html">Nature</a></li>
+                <li><a href="./wildlife.html">Wildlife</a></li>
+                <li><a href="./heritage.html">Heritage</a></li>
+                <li><a href="./about.html">About us</a></li>
+            </ul>
+            <p class="CTA"><a href="./plantrip.html">Plan a Trip</a></p>
+        </nav>
+
+        <div class="header-banner">
+            <div class="banner-content">
+                <h1>Bhedaghat Marble Rocks</h1>
+                <p>Experience the magical marble cliffs and roaring Dhuandhar waterfall along the serene Narmada River</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h2 class="section-title">Discover Bhedaghat</h2>
+        <p class="bhedaghat-intro">
+            Bhedaghat, located just 25 km from Jabalpur in Madhya Pradesh, is home to the spectacular marble rocks that rise 
+            to a height of 100 feet on either side of the Narmada River. This natural wonder creates a breathtaking gorge that 
+            gleams in sunlight and glows under moonlight. The area is also famous for the Dhuandhar Falls, where the Narmada 
+            River narrows and plunges from a height, creating a smoky cascade of water. Take a boat ride through the marble 
+            canyon, visit the ancient Chausath Yogini temple, or simply marvel at the power and beauty of nature in this magical 
+            destination.
+        </p>
+
+        <div class="highlight-section">
+            <h3 class="highlight-title">Experience the Magic</h3>
+            <div class="highlights-container">
+                <div class="highlight-box">
+                    <div class="highlight-icon">🚣</div>
+                    <div class="highlight-name">Boat Rides</div>
+                    <div class="highlight-description">
+                        Glide through the marble canyon on traditional boats while expert boatmen share local legends and point out fascinating rock formations.
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <div class="highlight-icon">💦</div>
+                    <div class="highlight-name">Dhuandhar Falls</div>
+                    <div class="highlight-description">
+                        Witness the "Smoke Cascade" where the mighty Narmada narrows to 10 meters and plunges with tremendous force, creating a misty spectacle.
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <div class="highlight-icon">🌙</div>
+                    <div class="highlight-name">Moonlight Views</div>
+                    <div class="highlight-description">
+                        Experience the surreal beauty of the marble rocks during full moon nights when they glow with an ethereal brilliance.
+                    </div>
+                </div>
+            </div>
+            <a href="./plantrip.html" class="book-button">Book Your Experience</a>
+        </div>
+
+        <div class="attractions-section">
+            <h2 class="section-title">Top Attractions</h2>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <div class="attraction-image" style="background-image: url('./assets/image/marble.webp')"></div>
+                    <div class="attraction-content">
+                        <div class="attraction-name">Marble Rock Formations</div>
+                        <div class="attraction-description">
+                            Marvel at the magnificent white marble cliffs that tower up to 100 feet on both sides of the Narmada River. These formations change color throughout the day, from soft white to golden to pink.
+                        </div>
+                        <div class="attraction-timing">Best Time: October to March</div>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-image" style="background-image: url('./assets/image/yogini.webp')"></div>
+                    <div class="attraction-content">
+                        <div class="attraction-name">Chausath Yogini Temple</div>
+                        <div class="attraction-description">
+                            Visit this 10th-century temple dedicated to Goddess Durga and her 64 yogini attendants. Located on a hilltop, it offers panoramic views of the surrounding landscape.
+                        </div>
+                        <div class="attraction-timing">Timing: 6:00 AM - 6:00 PM</div>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-image" style="background-image: url('./assets/image/Dhuandhaar\ Fall_6562B.jpg')"></div>
+                    <div class="attraction-content">
+                        <div class="attraction-name">Dhuandhar Waterfall</div>
+                        <div class="attraction-description">
+                            Experience the power of the Narmada as it crashes down from a height, creating a misty spray that gives this waterfall its name, which translates to "smoke cascade."
+                        </div>
+                        <div class="attraction-timing">Best Time: Monsoon season (July to September)</div>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-image" style="background-image: url('./assets/image/cable.jpg')"></div>
+                    <div class="attraction-content">
+                        <div class="attraction-name">Cable Car Ride</div>
+                        <div class="attraction-description">
+                            Enjoy a panoramic view of the river and marble formations from above on the newly constructed ropeway that connects the two banks of the Narmada River.
+                        </div>
+                        <div class="attraction-timing">Timing: 8:00 AM - 5:00 PM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-section">
+            <h2 class="section-title">How to Reach</h2>
+            <div class="location-text">
+                <p>Bhedaghat is located approximately 25 km from Jabalpur city in Madhya Pradesh. The nearest major airport is 
+                   Jabalpur Airport (JLR), which is about 30 km away. Jabalpur Junction railway station is well-connected to major 
+                   cities across India. From Jabalpur, you can hire a taxi or take a local bus to reach Bhedaghat. The road journey 
+                   offers scenic views and takes approximately 40 minutes.</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14664.174286122942!2d79.79888917665564!3d23.129463043313346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b4148395f967%3A0x43a66ba641bcf802!2sBhedaghat%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1682555555555!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer_container">
+            <div class="footer_column">
+                <h3>Explore</h3>
+                <ul class="footer_links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Nature</a></li>
+                    <li><a href="#">Wildlife</a></li>
+                    <li><a href="#">Heritage</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </div>
+            <div class="footer_column">
+                <h3>Tourist Info</h3>
+                <ul class="footer_links">
+                    <li><a href="#">Attractions</a></li>
+                    <li><a href="#">Accommodation</a></li>
+                    <li><a href="#">Tour Packages</a></li>
+                    <li><a href="#">Travel Tips</a></li>
+                </ul>
+            </div>
+            <div class="footer_column">
+                <h3>About MPTDC</h3>
+                <ul class="footer_links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Tourism Initiatives</a></li>
+                    <li><a href="#">Press & Media</a></li>
+                </ul>
+            </div>
+            <div class="footer_column">
+                <h3>Connect With Us</h3>
+                <p>Follow us on social media for the latest updates and travel inspiration</p>
+                <div class="social_icons">
+                    <a href="#" class="social_icon">f</a>
+                    <a href="#" class="social_icon">in</a>
+                    <a href="#" class="social_icon">tw</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Madhya Pradesh Tourism Development Corporation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // For any additional JavaScript functionality that might be needed
+        window.addEventListener('scroll', function() {
+            // Could add scroll animations or other effects here
+        });
+    </script>
+</body>
+</html>

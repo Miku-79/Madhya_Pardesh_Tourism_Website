@@ -166,7 +166,7 @@ a{
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 300px);
+    grid-template-rows: repeat(2, 300px);
     gap: 20px;
 }
 
@@ -350,28 +350,28 @@ a{
     background-size: cover;
     background-position: center;
     color: white;
-}
-
-.subscribe_heading {
+  }
+  
+  .subscribe_heading {
     font-size: 36px;
     margin-bottom: 20px;
-}
-
-.subscribe_form {
+  }
+  
+  .subscribe_form {
     display: flex;
     max-width: 500px;
     margin: 0 auto;
-}
-
-.subscribe_input {
+  }
+  
+  .subscribe_input {
     flex-grow: 1;
     padding: 15px;
     border: none;
     border-radius: 5px 0 0 5px;
     font-size: 16px;
-}
-
-.subscribe_btn {
+  }
+  
+  .subscribe_btn {
     background-color: #0080B3;
     color: white;
     border: none;
@@ -379,8 +379,16 @@ a{
     border-radius: 0 5px 5px 0;
     font-size: 16px;
     cursor: pointer;
-}
-
+  }
+  
+  #thankYouMessage {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 128, 179, 0.2);
+    border-radius: 5px;
+  }
+  
 footer {
     background-color: #333;
     color: white;
